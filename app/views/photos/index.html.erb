@@ -4,7 +4,11 @@
 	<p>Nukyc</p>
 <% else %>
 	<% @photos.each do |photo|%>
-		<%= image.tag(photo.photo_url) %>
-		<%= photo.name%>
+		<p><%= photo.category.name%></p>
+		<p><%= photo.name%></p>
+		<p><%= image_tag(photo.photo_url, widht: 300, heigth: 200) %></p>
+		<p>by <%= photo.user.nickname%></p>
+		<p><%= link_to "Like", vote_photo_path(photo.id) %>(<%= @like[photo.id] %>)</p>
+		<hr>
 	<% end %>
 <% end %>
