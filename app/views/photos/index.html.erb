@@ -2,7 +2,7 @@
 
 <hr>
 <% if @photos == [] %>
-	<p>Туй іщи нич ниє</p>
+	<p>Here you can upload new photo</p>
 <% else %>
 	<% @photos.each do |photo|%>
 		<p><%= photo.category.name%></p>
