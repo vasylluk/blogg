@@ -2,7 +2,7 @@
 
 <hr>
 <% if @images == [] %>
-	<p> Туй іщи нич ниє</p>
+	<p> Here you can upload multipart photo</p>
 <% else %>
 	<% @images.each do |image|%>
 		<p><%= image_tag(image.image.url, widht: 300, heigth: 200) %></p>
