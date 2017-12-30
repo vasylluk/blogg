@@ -1,13 +1,15 @@
 <%= link_to "Upload new photo" , new_photo_path , class: "btn btn-info"%>
+
 <hr>
 <% if @photos == [] %>
-	<p>Nukyc</p>
+	<p>Туй іщи нич ниє</p>
 <% else %>
 	<% @photos.each do |photo|%>
 		<p><%= photo.category.name%></p>
 		<p><%= photo.name%></p>
 		<p><%= image_tag(photo.photo_url, widht: 300, heigth: 200) %></p>
 		<p>by <%= photo.user.nickname%></p>
+		Created at: <%= photo.created_at %>
 		<p><%= link_to "Like", vote_photo_path(photo.id) %>(<%= @like[photo.id] %>)</p>
 		<hr>
 	<% end %>

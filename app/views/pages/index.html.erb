@@ -1,5 +1,7 @@
 <%= link_to "Create new post" , new_post_path , class: "btn btn-info"%>
-<%= link_to "Show Gallery" , photos_path , class: "btn btn-info"%>
+<%= link_to "Show photo Gallery" , photos_path , class: "btn btn-info"%>
+<%= link_to "Show multi-image Gallery" , images_path , class: "btn btn-info"%>
+
 <hr>
 <div>
 <% @posts.each do |post| %>

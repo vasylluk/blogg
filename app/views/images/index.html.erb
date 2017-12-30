@@ -1,0 +1,12 @@
+<%= link_to "Upload multipart photo" , new_image_path , class: "btn btn-info"%>
+
+<hr>
+<% if @images == [] %>
+	<p> Туй іщи нич ниє</p>
+<% else %>
+	<% @images.each do |image|%>
+		<p><%= image_tag(image.image.url, widht: 300, heigth: 200) %></p>
+		<p>by <%= image.user.nickname%></p>
+		<hr>
+	<% end %>
+<% end %>

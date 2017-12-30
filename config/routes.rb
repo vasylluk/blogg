@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'images/new'
+
   get 'photos/index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -16,5 +18,7 @@ Rails.application.routes.draw do
       get :vote
     end
   end
+   
+   resources :images
    
 end
